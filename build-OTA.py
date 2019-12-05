@@ -110,9 +110,6 @@ for item in array:
                     firmware[image_type]['Size'] = file_size
                 else:
                     print("========>   Something wrong ... already existing ....")
-            else:
-                print("===> Status not 0x00: %s" %item['_source']['layers']['zbee_zcl'])
-
 
         if item['_source']['layers']['zbee_zcl']['zbee_zcl_general.ota.cmd.srv_tx.id'] == '0x00000005':
             manuf_code = item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.manufacturer_code']
@@ -129,7 +126,7 @@ for item in array:
                     print("%s" %item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.image.data_raw'][0])
                 else:
                     cwdata_raw = item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.image.data_raw'][0]
-                    print("0x05 - [%3s]  ManufCode: %s, Type: %s, Version: %s, Offset: %s Size: %s" %(last_sqn, manuf_code, image_type, file_version, Offset, DataSize ))
+                    print("       [%3s]  ManufCode: %s, Type: %s, Version: %s, Offset: %s Size: %s" %(last_sqn, manuf_code, image_type, file_version, Offset, DataSize ))
             else:
                 continue
                 #print("Missing raw payload: %s" %item['_source']['layers']['zbee_zcl'])
@@ -147,7 +144,7 @@ for item in array:
                 continue
             if cwdata_raw:
                 if last_offset + 64 != int( Offset):
-                    print("Last Offset: %s new Offset: %s ==> Gap: %s" %(last_offset, Offset, int(Offset) - last_offset))
+                    print("===>  Last Offset: %s new Offset: %s ==> Gap: %s" %(last_offset, Offset, int(Offset) - last_offset))
                 last_offset = int(Offset)
                 if len(cwdata_raw) == 2*int(DataSize) and Offset not in firmware[image_type]['Image']:
                     firmware[image_type]['Image'][Offset] = cwdata_raw
