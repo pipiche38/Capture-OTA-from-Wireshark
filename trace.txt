@@ -1,6 +1,19 @@
+====> Lost in Sequence 0 versus 6
+0x01 - ManufCode: 0x00001021, Type: 17, Version: 0x00234203
+0x01 - ManufCode: 0x00001021, Type: 19, Version: 0x001d4203
+0x01 - ManufCode: 0x00001021, Type: 16, Version: 0x001a4203
+0x01 - ManufCode: 0x00001021, Type: 16, Version: 0x001a4203
+0x01 - ManufCode: 0x00001021, Type: 14, Version: 0x00264203
+0x01 - ManufCode: 0x00001021, Type: 14, Version: 0x00264203
+0x01 - ManufCode: 0x00001021, Type: 16, Version: 0x001a4203
+0x01 - ManufCode: 0x00001021, Type: 14, Version: 0x00264203
+====> Lost in Sequence 4 versus 84
+0x01 - ManufCode: 0x00001021, Type: 16, Version: 0x001a4203
 New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, Size: 221655
        [ 15]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 62 Size: 8
+===>  Last Offset: 0 new Offset: 62 ==> Gap: 62
        [ 16]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 70 Size: 64
+===>  Last Offset: 62 new Offset: 70 ==> Gap: 8
        [ 16]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 134 Size: 64
        [ 16]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 198 Size: 64
        [ 16]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 262 Size: 64
@@ -83,7 +96,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [ 34]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 4678 Size: 64
        [ 34]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 4742 Size: 64
        [ 34]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 4742 Size: 64
-===>  Last Offset: 4742 new Offset: 4742 ==> Gap: 0
 -----> DEDUP - Offset: 4742 already loaded
        [ 34]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 4806 Size: 64
        [ 34]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 4870 Size: 64
@@ -2327,7 +2339,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
 ===>  Last Offset: 149126 new Offset: 149318 ==> Gap: 192
        [ 88]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 149382 Size: 64
        [ 88]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 149382 Size: 64
-===>  Last Offset: 149382 new Offset: 149382 ==> Gap: 0
 -----> DEDUP - Offset: 149382 already loaded
        [ 88]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 149446 Size: 64
        [ 88]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 149510 Size: 64
@@ -2398,7 +2409,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
 ===>  Last Offset: 153734 new Offset: 153862 ==> Gap: 128
        [106]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 153926 Size: 64
        [106]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 153926 Size: 64
-===>  Last Offset: 153926 new Offset: 153926 ==> Gap: 0
 -----> DEDUP - Offset: 153926 already loaded
        [106]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 153990 Size: 64
        [106]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 154054 Size: 64
@@ -2422,7 +2432,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [111]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 155206 Size: 64
        [111]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 155270 Size: 64
        [111]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 155270 Size: 64
-===>  Last Offset: 155270 new Offset: 155270 ==> Gap: 0
 -----> DEDUP - Offset: 155270 already loaded
        [111]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 155334 Size: 64
        [112]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 155462 Size: 64
@@ -2504,7 +2513,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [131]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 160390 Size: 64
        [131]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 160454 Size: 64
        [131]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 160454 Size: 64
-===>  Last Offset: 160454 new Offset: 160454 ==> Gap: 0
 -----> DEDUP - Offset: 160454 already loaded
        [131]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 160518 Size: 64
        [132]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 160582 Size: 64
@@ -2555,7 +2563,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [143]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 163526 Size: 64
        [143]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 163590 Size: 64
        [143]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 163590 Size: 64
-===>  Last Offset: 163590 new Offset: 163590 ==> Gap: 0
 -----> DEDUP - Offset: 163590 already loaded
        [144]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 163654 Size: 64
        [144]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 163718 Size: 64
@@ -2643,7 +2650,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [166]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 169286 Size: 64
 ===>  Last Offset: 169158 new Offset: 169286 ==> Gap: 128
        [166]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 169286 Size: 64
-===>  Last Offset: 169286 new Offset: 169286 ==> Gap: 0
 -----> DEDUP - Offset: 169286 already loaded
        [166]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 169350 Size: 64
        [166]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 169414 Size: 64
@@ -2734,7 +2740,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [189]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 175238 Size: 64
        [189]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 175302 Size: 64
        [189]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 175302 Size: 64
-===>  Last Offset: 175302 new Offset: 175302 ==> Gap: 0
 -----> DEDUP - Offset: 175302 already loaded
        [189]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 175366 Size: 64
        [190]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 175430 Size: 64
@@ -2758,7 +2763,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [194]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 176582 Size: 64
        [194]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 176646 Size: 64
        [194]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 176646 Size: 64
-===>  Last Offset: 176646 new Offset: 176646 ==> Gap: 0
 -----> DEDUP - Offset: 176646 already loaded
        [195]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 176710 Size: 64
        [195]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 176774 Size: 64
@@ -2900,7 +2904,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [231]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 185926 Size: 64
        [231]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 185990 Size: 64
        [231]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 185990 Size: 64
-===>  Last Offset: 185990 new Offset: 185990 ==> Gap: 0
 -----> DEDUP - Offset: 185990 already loaded
        [231]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 186054 Size: 64
        [232]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 186182 Size: 64
@@ -3030,7 +3033,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [  7]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 194118 Size: 64
        [  7]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 194182 Size: 64
        [  7]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 194182 Size: 64
-===>  Last Offset: 194182 new Offset: 194182 ==> Gap: 0
 -----> DEDUP - Offset: 194182 already loaded
        [  8]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 194374 Size: 64
 ===>  Last Offset: 194182 new Offset: 194374 ==> Gap: 192
@@ -3188,7 +3190,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
        [ 49]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 204870 Size: 64
 ===>  Last Offset: 204678 new Offset: 204870 ==> Gap: 192
        [ 49]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 204870 Size: 64
-===>  Last Offset: 204870 new Offset: 204870 ==> Gap: 0
 -----> DEDUP - Offset: 204870 already loaded
        [ 49]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 204934 Size: 64
        [ 49]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 204998 Size: 64
@@ -3300,7 +3301,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 16, Version: 0x001c0000, S
 ===>  Last Offset: 212038 new Offset: 212230 ==> Gap: 192
        [ 78]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 212294 Size: 64
        [ 78]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 212294 Size: 64
-===>  Last Offset: 212294 new Offset: 212294 ==> Gap: 0
 -----> DEDUP - Offset: 212294 already loaded
        [ 78]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 212358 Size: 64
        [ 78]  ManufCode: 0x00001021, Type: 16, Version: 0x001c0000, Offset: 212422 Size: 64
@@ -3586,7 +3586,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [ 51]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 8966 Size: 64
        [ 52]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 9030 Size: 64
        [ 52]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 9030 Size: 64
-===>  Last Offset: 9030 new Offset: 9030 ==> Gap: 0
 -----> DEDUP - Offset: 9030 already loaded
        [ 52]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 9094 Size: 64
        [ 53]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 9286 Size: 64
@@ -3767,7 +3766,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
 ====> Lost in Sequence 19 versus 98
        [ 98]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 20806 Size: 64
        [ 98]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 20806 Size: 64
-===>  Last Offset: 20806 new Offset: 20806 ==> Gap: 0
 -----> DEDUP - Offset: 20806 already loaded
        [ 98]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 20870 Size: 64
        [ 98]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 20998 Size: 64
@@ -3945,7 +3943,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [142]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 31878 Size: 64
        [142]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 31942 Size: 64
        [142]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 31942 Size: 64
-===>  Last Offset: 31942 new Offset: 31942 ==> Gap: 0
 -----> DEDUP - Offset: 31942 already loaded
        [142]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 32006 Size: 64
        [143]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 32070 Size: 64
@@ -4001,7 +3998,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [155]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 35334 Size: 64
        [156]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 35398 Size: 64
        [156]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 35398 Size: 64
-===>  Last Offset: 35398 new Offset: 35398 ==> Gap: 0
 -----> DEDUP - Offset: 35398 already loaded
        [156]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 35462 Size: 64
        [156]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 35526 Size: 64
@@ -4078,7 +4074,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [175]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 40262 Size: 64
        [175]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 40326 Size: 64
        [175]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 40326 Size: 64
-===>  Last Offset: 40326 new Offset: 40326 ==> Gap: 0
 -----> DEDUP - Offset: 40326 already loaded
        [175]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 40390 Size: 64
        [175]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 40454 Size: 64
@@ -4114,7 +4109,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [183]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 42502 Size: 64
        [184]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 42566 Size: 64
        [184]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 42566 Size: 64
-===>  Last Offset: 42566 new Offset: 42566 ==> Gap: 0
 -----> DEDUP - Offset: 42566 already loaded
        [184]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 42630 Size: 64
        [184]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 42694 Size: 64
@@ -4139,7 +4133,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [189]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 43974 Size: 64
        [189]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 44038 Size: 64
        [189]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 44038 Size: 64
-===>  Last Offset: 44038 new Offset: 44038 ==> Gap: 0
 -----> DEDUP - Offset: 44038 already loaded
        [190]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 44102 Size: 64
        [190]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 44166 Size: 64
@@ -4211,7 +4204,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [207]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 48582 Size: 64
        [207]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 48646 Size: 64
        [207]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 48646 Size: 64
-===>  Last Offset: 48646 new Offset: 48646 ==> Gap: 0
 -----> DEDUP - Offset: 48646 already loaded
        [208]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 48710 Size: 64
        [208]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 48774 Size: 64
@@ -4272,7 +4264,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [223]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 52614 Size: 64
        [223]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 52678 Size: 64
        [223]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 52678 Size: 64
-===>  Last Offset: 52678 new Offset: 52678 ==> Gap: 0
 -----> DEDUP - Offset: 52678 already loaded
        [223]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 52742 Size: 64
        [224]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 52806 Size: 64
@@ -4381,7 +4372,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [250]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 59590 Size: 64
        [250]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 59654 Size: 64
        [250]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 59654 Size: 64
-===>  Last Offset: 59654 new Offset: 59654 ==> Gap: 0
 -----> DEDUP - Offset: 59654 already loaded
        [251]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 59718 Size: 64
        [251]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 59782 Size: 64
@@ -4475,13 +4465,11 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [ 18]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 65734 Size: 64
        [ 18]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 65798 Size: 64
        [ 18]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 65798 Size: 64
-===>  Last Offset: 65798 new Offset: 65798 ==> Gap: 0
 -----> DEDUP - Offset: 65798 already loaded
        [ 19]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 65862 Size: 64
        [ 19]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 65926 Size: 64
        [ 19]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 65990 Size: 64
        [ 19]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 65990 Size: 64
-===>  Last Offset: 65990 new Offset: 65990 ==> Gap: 0
 -----> DEDUP - Offset: 65990 already loaded
        [ 19]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 66054 Size: 64
        [ 20]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 66118 Size: 64
@@ -4649,7 +4637,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [ 63]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 77190 Size: 64
        [ 63]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 77254 Size: 64
        [ 63]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 77254 Size: 64
-===>  Last Offset: 77254 new Offset: 77254 ==> Gap: 0
 -----> DEDUP - Offset: 77254 already loaded
        [ 63]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 77318 Size: 64
        [ 64]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 77382 Size: 64
@@ -4675,7 +4662,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [ 69]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 78790 Size: 64
        [ 69]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 78854 Size: 64
        [ 69]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 78854 Size: 64
-===>  Last Offset: 78854 new Offset: 78854 ==> Gap: 0
 -----> DEDUP - Offset: 78854 already loaded
        [ 70]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 78918 Size: 64
        [ 70]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 78982 Size: 64
@@ -4945,7 +4931,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [141]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 97094 Size: 64
        [141]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 97158 Size: 64
        [141]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 97158 Size: 64
-===>  Last Offset: 97158 new Offset: 97158 ==> Gap: 0
 -----> DEDUP - Offset: 97158 already loaded
        [141]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 97222 Size: 64
        [141]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 97286 Size: 64
@@ -5057,7 +5042,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [169]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 104454 Size: 64
        [170]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 104518 Size: 64
        [170]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 104518 Size: 64
-===>  Last Offset: 104518 new Offset: 104518 ==> Gap: 0
 -----> DEDUP - Offset: 104518 already loaded
        [170]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 104582 Size: 64
        [170]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 104646 Size: 64
@@ -5106,7 +5090,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [182]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 107654 Size: 64
 ===>  Last Offset: 107462 new Offset: 107654 ==> Gap: 192
        [182]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 107654 Size: 64
-===>  Last Offset: 107654 new Offset: 107654 ==> Gap: 0
 -----> DEDUP - Offset: 107654 already loaded
        [182]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 107782 Size: 64
 ===>  Last Offset: 107654 new Offset: 107782 ==> Gap: 128
@@ -5602,7 +5585,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [ 54]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 140550 Size: 64
 ===>  Last Offset: 140422 new Offset: 140550 ==> Gap: 128
        [ 54]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 140550 Size: 64
-===>  Last Offset: 140550 new Offset: 140550 ==> Gap: 0
 -----> DEDUP - Offset: 140550 already loaded
        [ 55]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 140614 Size: 64
        [ 55]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 140678 Size: 64
@@ -5690,7 +5672,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [ 77]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 146310 Size: 64
        [ 77]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 146374 Size: 64
        [ 77]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 146374 Size: 64
-===>  Last Offset: 146374 new Offset: 146374 ==> Gap: 0
 -----> DEDUP - Offset: 146374 already loaded
        [ 77]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 146438 Size: 64
        [ 78]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 146566 Size: 64
@@ -5808,11 +5789,9 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [107]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 154118 Size: 64
        [108]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 154182 Size: 64
        [108]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 154182 Size: 64
-===>  Last Offset: 154182 new Offset: 154182 ==> Gap: 0
 -----> DEDUP - Offset: 154182 already loaded
        [108]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 154246 Size: 64
        [108]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 154246 Size: 64
-===>  Last Offset: 154246 new Offset: 154246 ==> Gap: 0
 -----> DEDUP - Offset: 154246 already loaded
        [108]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 154310 Size: 64
        [108]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 154374 Size: 64
@@ -5867,7 +5846,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [122]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 157894 Size: 64
        [122]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 157958 Size: 64
        [122]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 157958 Size: 64
-===>  Last Offset: 157958 new Offset: 157958 ==> Gap: 0
 -----> DEDUP - Offset: 157958 already loaded
        [123]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 158022 Size: 64
        [123]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 158086 Size: 64
@@ -5931,7 +5909,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [138]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 162054 Size: 64
        [139]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 162118 Size: 64
        [139]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 162118 Size: 64
-===>  Last Offset: 162118 new Offset: 162118 ==> Gap: 0
 -----> DEDUP - Offset: 162118 already loaded
        [139]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 162182 Size: 64
        [139]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 162246 Size: 64
@@ -6422,7 +6399,6 @@ New Firmware to be captured: Manuf: 0x00001021, Type: 14, Version: 0x00290000, S
        [ 14]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 195526 Size: 64
        [ 14]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 195590 Size: 64
        [ 14]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 195590 Size: 64
-===>  Last Offset: 195590 new Offset: 195590 ==> Gap: 0
 -----> DEDUP - Offset: 195590 already loaded
        [ 15]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 195654 Size: 64
        [ 15]  ManufCode: 0x00001021, Type: 14, Version: 0x00290000, Offset: 195718 Size: 64

@@ -143,11 +143,11 @@ for item in array:
                 print("Error missmatch of Version %s versus %s" %(firmware[image_type]['Version'], file_version))
                 continue
             if cwdata_raw:
-                if last_offset + 64 != int( Offset):
-                    print("===>  Last Offset: %s new Offset: %s ==> Gap: %s" %(last_offset, Offset, int(Offset) - last_offset))
-                last_offset = int(Offset)
                 if len(cwdata_raw) == 2*int(DataSize) and Offset not in firmware[image_type]['Image']:
                     firmware[image_type]['Image'][Offset] = cwdata_raw
+                    if last_offset + 64 != int( Offset):
+                        print("===>  Last Offset: %s new Offset: %s ==> Gap: %s" %(last_offset, Offset, int(Offset) - last_offset))
+                    last_offset = int(Offset)
                 else:
                     print("-----> DEDUP - Offset: %s already loaded" %(Offset))
                     continue
