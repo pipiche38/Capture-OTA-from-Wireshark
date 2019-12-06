@@ -1,5 +1,7 @@
+import os
 import json
 import binascii
+import struct
 
 
 filename = 'OTA_CLUSTER.json'
@@ -161,8 +163,29 @@ for item in array:
 
 
 for firm in firmware:
+    filename = 'OTA_%s_%s_%s' %( firm, firmware[firm]['ManufCode'], firmware[firm]['Version'] )
+    updateExisting = 0
     hole = 0
-    for offset in firmware[firm]['Image']:
+    existingImage = None
+
+    sorted_offset = sorted( firmware[firm]['Image'].keys())
+
+    if os.path.isfile( filename + '.json' ):
+        with open( filename + '.json' , 'r') as old_f:
+            existingImage = json.load( old_f)
+        if existingImage:
+            if existingImage['Version'] != firmware[firm]['Version'] or existingImage['ManufCode'] != firmware[firm]['ManufCode'] or existingImage['Size'] != firmware[firm]['Size']:
+                print("===> Mismatch between Existing json %s and current loaded infos ...")
+                continue
+
+    for offset in sorted_offset:
+        if existingImage and offset not in existingImage['Image']:
+            updateExisting += 1
+            print("====> Good news we found a new bloc at offset %s" %offset)
+            existingImage['Image'][offset] = {}
+            existingImage['Image'][offset]['Size'] = firmware[firm]['Image'][offset]['Size']
+            existingImage['Image'][offset]['Data'] = firmware[firm]['Image'][offset]['Data']
+
         if str( int(offset) + int(firmware[firm]['Image'][offset]['Size']) ) not in firmware[firm]['Image']:
             hole += 1
             #print("[%s] ---> %s hole at offset: %s" %(hole, firm, int(offset) + int(firmware[firm]['Image'][offset]['Size']) ))
@@ -177,6 +200,25 @@ for firm in firmware:
     print("--> Expected Chunks based on 64 bytes: %s" %(round(int(firmware[firm]['Size'])/64,0)))
     print("--> Lacking packets estimated        : %s" %( (round(int(firmware[firm]['Size'])/64,0)) - len(firmware[firm]['Image'])))
 
-    filename = 'OTA_%s_%s_%s.json' %( firm, firmware[firm]['ManufCode'], firmware[firm]['Version'] )
-    with open( filename, 'w') as fp:
-        json.dump(firmware[firm], fp)
+    if updateExisting:
+        print("Updating Existing: %s" %(filename + '.json'))
+        with open( filename +'.json', 'w') as fp:
+            json.dump(existingImage, fp)
+    else:
+        print("Creating : %s" %(filename + '.json'))
+        with open( filename +'.json', 'w') as fp:
+            json.dump(firmware[firm], fp)
+
+    if hole == 0:
+        # Store the Firmware
+        raw_headers = b''   # Format: <LHHHHHLH32BLBQHH
+        raw_image = b''
+        for offset in sorted_offset:
+            hex_data = firmware[firm]['Image'][offset]['Data'].split(':')
+            for hex_byte in hex_data:
+                raw_image += struct.pack("<B",int(hex_byte, 16))
+
+        imageFile = open(filename +'.ota', "wb")
+        imageFile.write(raw_headers)
+        imageFile.write(raw_image)
+        imageFile.close()
