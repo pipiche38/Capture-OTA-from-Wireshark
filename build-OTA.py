@@ -45,6 +45,7 @@ IMAGE_TYPES = {
 
 firmware = {}
 last_offset = 0
+last_datasize = 0
 last_sqn = 0
 
 with open( filename, 'r') as f:
@@ -106,8 +107,9 @@ for item in array:
                     last_offset = 0
                     firmware[image_type] = {}
                     firmware[image_type]['Version'] = file_version
-                    firmware[image_type]['Image'] = {}
+                    firmware[image_type]['ManufCode'] = manuf_code
                     firmware[image_type]['Size'] = file_size
+                    firmware[image_type]['Image'] = {}
                 else:
                     print("========>   Something wrong ... already existing ....")
 
@@ -118,45 +120,63 @@ for item in array:
 
             Offset = item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.file.offset']
             DataSize = item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.data_size']
-
-            cwdata_raw = None
-            if 'zbee_zcl_general.ota.image.data_raw' in item['_source']['layers']['zbee_zcl']['Payload']:
-                if len(item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.image.data_raw'][0]) != (int(DataSize) * 2):
-                    print("Not matching size - Data len: %s expecting %s" %(len(item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.image.data_raw'][0]), int(DataSize)*2))
-                    print("%s" %item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.image.data_raw'][0])
-                else:
-                    cwdata_raw = item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.image.data_raw'][0]
-                    print("       [%3s]  ManufCode: %s, Type: %s, Version: %s, Offset: %s Size: %s" %(last_sqn, manuf_code, image_type, file_version, Offset, DataSize ))
-            else:
-                continue
-                #print("Missing raw payload: %s" %item['_source']['layers']['zbee_zcl'])
+            Data = item['_source']['layers']['zbee_zcl']['Payload']['zbee_zcl_general.ota.image.data']
 
             if image_type not in firmware:
                 last_offset = 0
                 firmware[image_type] = {}
+                firmware[image_type]['ManufCode'] = manuf_code
                 firmware[image_type]['Version'] = file_version
                 firmware[image_type]['Image'] = {}
+
             if 'Image' not in firmware[image_type]:
                 firmware[image_type]['Image'] = {}
 
             if firmware[image_type]['Version'] != file_version:
                 print("Error missmatch of Version %s versus %s" %(firmware[image_type]['Version'], file_version))
                 continue
-            if cwdata_raw:
-                if len(cwdata_raw) == 2*int(DataSize) and Offset not in firmware[image_type]['Image']:
-                    firmware[image_type]['Image'][Offset] = cwdata_raw
-                    if last_offset + 64 != int( Offset):
-                        print("===>  Last Offset: %s new Offset: %s ==> Gap: %s" %(last_offset, Offset, int(Offset) - last_offset))
-                    last_offset = int(Offset)
-                else:
-                    print("-----> DEDUP - Offset: %s already loaded" %(Offset))
-                    continue
+
+            if firmware[image_type]['ManufCode'] != manuf_code:
+                print("Error missmatch of Manuf Code %s versus %s" %(firmware[image_type]['ManufCode'], manuf_code))
+                continue
+
+            if Offset not in firmware[image_type]['Image']:
+                firmware[image_type]['Image'][Offset] = {}
+                firmware[image_type]['Image'][Offset]['Size'] = DataSize
+                firmware[image_type]['Image'][Offset]['Data'] = Data
+
+                if Data != firmware[image_type]['Image'][Offset]['Data']:
+                    print("===============> Different Data: ")
+                    print("                      New: %s" %( Data))
+                    print("                      Old: %s" %( firmware[image_type]['Image'][Offset]['Data']))
+            else:
+                print("-----> DEDUP - Offset: %s already loaded" %(Offset))
+                continue
+
+            #if last_offset + last_datasize != int( Offset):
+            #    print("===>  Last Offset: %s Last Datasize: %s new Offset: %s ==> Gap: %s" %(last_offset, last_datasize, Offset, int(Offset) - ( last_offset + last_datasize)))
+            last_offset = int(Offset)
+            last_datasize = int(DataSize)
 
 
 
 for firm in firmware:
+    hole = 0
+    for offset in firmware[firm]['Image']:
+        if str( int(offset) + int(firmware[firm]['Image'][offset]['Size']) ) not in firmware[firm]['Image']:
+            hole += 1
+            #print("[%s] ---> %s hole at offset: %s" %(hole, firm, int(offset) + int(firmware[firm]['Image'][offset]['Size']) ))
+
     print("Captured firmware:")
     print("--> Type   : %s" %firm)
+    print("--> ManufCo: %s" %firmware[firm]['ManufCode'])
     print("--> Version: %s" %firmware[firm]['Version'])
     print("--> Size   : %s" %firmware[firm]['Size'])
     print("--> Chunk  : %s" %len(firmware[firm]['Image']))
+    print("--> Detected                  Holes  : %s" %hole)
+    print("--> Expected Chunks based on 64 bytes: %s" %(round(int(firmware[firm]['Size'])/64,0)))
+    print("--> Lacking packets estimated        : %s" %( (round(int(firmware[firm]['Size'])/64,0)) - len(firmware[firm]['Image'])))
+
+    filename = 'OTA_%s_%s_%s.json' %( firm, firmware[firm]['ManufCode'], firmware[firm]['Version'] )
+    with open( filename, 'w') as fp:
+        json.dump(firmware[firm], fp)
