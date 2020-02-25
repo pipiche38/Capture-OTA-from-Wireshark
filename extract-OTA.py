@@ -201,11 +201,12 @@ for firm in firmware:
     print("--> Type   : %s" %firm)
     print("--> ManufCo: %s" %firmware[firm]['ManufCode'])
     print("--> Version: %s" %firmware[firm]['Version'])
-    print("--> Size   : %s" %firmware[firm]['Size'])
     print("--> Chunk  : %s" %len(firmware[firm]['Image']))
     print("--> Detected                  Holes  : %s" %hole)
-    print("--> Expected Chunks based on 64 bytes: %s" %(round(int(firmware[firm]['Size'])/64,0)))
-    print("--> Lacking packets estimated        : %s" %( (round(int(firmware[firm]['Size'])/64,0)) - len(firmware[firm]['Image'])))
+    if 'Size' in firmware[firm]:
+        print("--> Size   : %s" %firmware[firm]['Size'])
+        print("--> Expected Chunks based on 64 bytes: %s" %(round(int(firmware[firm]['Size'])/64,0)))
+        print("--> Lacking packets estimated        : %s" %( (round(int(firmware[firm]['Size'])/64,0)) - len(firmware[firm]['Image'])))
 
     if updateExisting:
         print("Updating Existing: %s" %(filename + '.json'))
