@@ -8,4 +8,4 @@ For now, the main issue seems to the quality of the Capture, as it looks like I'
 
 Here after is what I came too. 
 
-https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Retreiving-Legrand-Firmware.md
+https://github.com/pipiche38/Domoticz-Zigate-Wiki/blob/master/en-eng/Corner_Retreiving-Legrand-Firmware.md
